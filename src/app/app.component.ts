@@ -10,9 +10,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
 
   // e1p1
-  titulo: string = 'meu primeiro app com angular';
-
-  // e2p1
-  idade: number = 20;
+  descricaoImg = 'wallpaper mk11 - scorpion';
+  caminhoImagem = 'https://images4.alphacoders.com/993/thumb-1920-993081.jpg';
 
 }
