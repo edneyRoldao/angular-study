@@ -1,8 +1,17 @@
-<div>
-  <h2>
+
+<div class="container mt-5">
+  <div class="jumbotron">
+    <h1 class="display-3">Event Binding</h1>
 
     <!-- e1p2 f -->
-    <img [src]="caminhoImagem" width="600" height="450" [alt]="descricaoImg">
+    <div (click)="onClickEvent()" class="btn btn-large btn-success mb-5">
+      CLICK AQUI
+    </div>
 
-  </h2>
+    <br>
+
+    <!-- e2p2 f -->
+    <div (mouseout)="tiraMao($event)" (mouseover)="passaMao()" class="alert alert-primary"> passe o mouse aqui </div>
+
+  </div>
 </div>

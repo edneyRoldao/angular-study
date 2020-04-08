@@ -10,7 +10,17 @@ import { Component } from '@angular/core';
 export class AppComponent {
 
   // e1p1
-  descricaoImg = 'wallpaper mk11 - scorpion';
-  caminhoImagem = 'https://images4.alphacoders.com/993/thumb-1920-993081.jpg';
+  onClickEvent() {
+    alert('botao pressionado');
+  }
+
+  // e2p1
+  passaMao() {
+    console.log('passou a mao aqui');
+  }
+
+  tiraMao(event: any) {
+    console.log('tirou a mao aqui', event);
+  }
 
 }
