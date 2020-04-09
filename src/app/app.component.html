@@ -1,17 +1,48 @@
 
 <div class="container mt-5">
+  <h2>Two Way dataBinding - forma 1</h2>
   <div class="jumbotron">
-    <h1 class="display-3">Event Binding</h1>
 
-    <!-- e1p2 f -->
-    <div (click)="onClickEvent()" class="btn btn-large btn-success mb-5">
-      CLICK AQUI
+    <div class="form-group">
+      <!-- e1p3 f -->
+      <input [value]="nome" type="text" class="form-control" (input)="atualizar($event)">
     </div>
 
-    <br>
-
-    <!-- e2p2 f -->
-    <div (mouseout)="tiraMao($event)" (mouseover)="passaMao()" class="alert alert-primary"> passe o mouse aqui </div>
+    <h3>{{ nome }}</h3>
 
   </div>
+
+</div>
+
+
+
+<div class="container mt-5">
+  <h2>Two Way dataBinding - forma 2</h2>
+  <div class="jumbotron">
+
+    <div class="form-group">
+      <!-- e2p3 f -->
+      <input [ngModel]="email" type="text" class="form-control" (ngModelChange)="handleUpdate($event)">
+    </div>
+
+    <h3>{{ email }}</h3>
+
+  </div>
+
+</div>
+
+
+<div class="container mt-5">
+  <h2>Two Way dataBinding - forma 3 (precisa importar o formsModule)</h2>
+  <div class="jumbotron">
+
+    <div class="form-group">
+      <!-- e3p2 f -->
+      <input [(ngModel)]="sobrenome" type="text" class="form-control">
+    </div>
+
+    <h3>{{ sobrenome }}</h3>
+
+  </div>
+
 </div>
