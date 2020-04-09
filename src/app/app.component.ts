@@ -10,12 +10,11 @@ import { Component } from '@angular/core';
 export class AppComponent {
 
   // e1p1
-  nome: string = 'ricardo jonas';
+  idade: number = 20;
 
   // e1p2
-  update(template: any) {
-    console.log(template);
-    this.nome = template.value;
+  updateIdade(idade: number) {
+    this.idade = idade;
   }
 
 }

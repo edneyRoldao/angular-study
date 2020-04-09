@@ -1,18 +1,21 @@
 
 <div class="container mt-5">
-  <h2>Template Ref</h2>
+  <h2>Diretive NgIf - adiciona e remove elemento da DOM</h2>
   <div class="jumbotron">
 
     <div class="form-group">
       <!-- e1p3 -->
-      <input type="text" class="form-control" #valorDoInput>
+      <input type="text" class="form-control" #idadeRef>
     </div>
     <div class="form-group">
-      <!-- e1p4 f -->
-      <button class="btn btn-danger" (click)="update(valorDoInput)">UPDATE</button>
+      <!-- e1p4 -->
+      <button class="btn btn-primary" (click)="updateIdade(idadeRef.value)">Verificar</button>
     </div>
 
-    <h3>{{ nome }}</h3>
+    <!-- e1p5 f -->
+    <div *ngIf="idade < 18">
+      <div class="alert alert-danger">E UMA CRIANCA</div>
+    </div>
 
   </div>
 
