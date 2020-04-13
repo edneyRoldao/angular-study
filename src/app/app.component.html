@@ -1,24 +1,12 @@
 
 <div class="container mt-5">
-  <h2>Diretive NgIf - adiciona e remove elemento da DOM</h2>
+  <h2>Diretive NgFor - podemos fazer loop em componentes inteiros</h2>
   <div class="jumbotron">
 
-    <div class="form-group">
-      <!-- e1p3 -->
-      <input type="text" class="form-control" #idadeRef>
-    </div>
-    <div class="form-group">
-      <!-- e1p4 -->
-      <button class="btn btn-primary" (click)="updateIdade(idadeRef.value)">Verificar</button>
-    </div>
-
-    <!-- e1p5 f -->
-    <div *ngIf="idade < 18">
-      <div class="alert alert-danger">E UMA CRIANCA</div>
-    </div>
+    <!-- e1p2 -->
+    <ul class="list-group" *ngFor="let carro of carros; let i = index">
+      <li class="list-group-item"> {{i + 1}} - {{carro.nome}}  - {{carro.ano}} </li>
+    </ul>
 
   </div>
-
 </div>
-
-

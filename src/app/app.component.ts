@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Carro } from './carro.interface';
 
 @Component({
   selector: 'app-root',
@@ -9,12 +10,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
-  // e1p1
-  idade: number = 20;
-
-  // e1p2
-  updateIdade(idade: number) {
-    this.idade = idade;
-  }
+  //e1p1
+  carros: Carro[] = [
+    {nome: 'i30', ano: 2010},
+    {nome: 'bmw', ano: 2019},
+    {nome: 'mercedes', ano: 2020},
+    {nome: 'punto', ano: 2014}
+  ];
 
 }
