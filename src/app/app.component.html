@@ -1,11 +1,11 @@
 
 <div class="container mt-5">
-  <h2>Diretive NgClass - nesse exemplo, cada attr do objeto dentro do ngClass</h2>
+  <h2> Diretive NgStyle - exemplo 1</h2>
   <div class="jumbotron">
 
-    <!-- e1p2 -->
+    <!-- e1p1 f -->
     <ul class="list-group" *ngFor="let carro of carros">
-      <li class="list-group-item" [ngClass]="{'novo': carro.ano > 2017, 'velho': carro.ano < 2017}" >
+      <li class="list-group-item" [style.background]="(carro.ano < 2017 ? 'red' : 'yellow')">
         {{carro.nome}} - {{carro.ano}}
       </li>
     </ul>
@@ -14,12 +14,15 @@
 </div>
 
 <div class="container mt-5">
-  <h2>Diretive NgClass - </h2>
+  <h2> Diretive NgStyle - exemplo 2</h2>
   <div class="jumbotron">
 
-    <!-- e1p2 -->
+    <!-- e2p1 f -->
     <ul class="list-group" *ngFor="let carro of carros">
-      <li class="list-group-item" [class.velho]="carro.ano < 2017">
+      <li class="list-group-item" [ngStyle]="{
+        'background': (carro.ano < 2017 ? 'red' : 'yellow'),
+        'font-weight': (carro.ano < 2017 ? 'bold' : 'normal')
+      }">
         {{carro.nome}} - {{carro.ano}}
       </li>
     </ul>
