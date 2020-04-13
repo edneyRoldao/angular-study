@@ -1,11 +1,27 @@
 
 <div class="container mt-5">
-  <h2>Diretive NgFor - podemos fazer loop em componentes inteiros</h2>
+  <h2>Diretive NgClass - nesse exemplo, cada attr do objeto dentro do ngClass</h2>
   <div class="jumbotron">
 
     <!-- e1p2 -->
-    <ul class="list-group" *ngFor="let carro of carros; let i = index">
-      <li class="list-group-item"> {{i + 1}} - {{carro.nome}}  - {{carro.ano}} </li>
+    <ul class="list-group" *ngFor="let carro of carros">
+      <li class="list-group-item" [ngClass]="{'novo': carro.ano > 2017, 'velho': carro.ano < 2017}" >
+        {{carro.nome}} - {{carro.ano}}
+      </li>
+    </ul>
+
+  </div>
+</div>
+
+<div class="container mt-5">
+  <h2>Diretive NgClass - </h2>
+  <div class="jumbotron">
+
+    <!-- e1p2 -->
+    <ul class="list-group" *ngFor="let carro of carros">
+      <li class="list-group-item" [class.velho]="carro.ano < 2017">
+        {{carro.nome}} - {{carro.ano}}
+      </li>
     </ul>
 
   </div>
