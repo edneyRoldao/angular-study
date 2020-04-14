@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { Carro } from './carro.interface';
 
 @Component({
   selector: 'app-root',
@@ -10,12 +9,14 @@ import { Carro } from './carro.interface';
 })
 export class AppComponent {
 
-  carros: Carro[] = [
-    {nome: 'i30', ano: 2010},
-    {nome: 'bmw', ano: 2019},
-    {nome: 'mercedes', ano: 2020},
-    {nome: 'porche', ano: 2017},
-    {nome: 'punto', ano: 2014}
-  ];
+  // e1p1
+  dtNascimento = new Date();
+
+  frutas = ['banana', 'pera', 'maca', 'laranja'];
+
+  // e1p4 f (ver data no console)
+  verData() {
+    console.log(this.dtNascimento);
+  }
 
 }

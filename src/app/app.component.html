@@ -1,31 +1,33 @@
 
 <div class="container mt-5">
-  <h2> Diretive NgStyle - exemplo 1</h2>
+  <h2> Usando Pipes - exemplo 1</h2>
   <div class="jumbotron">
 
-    <!-- e1p1 f -->
-    <ul class="list-group" *ngFor="let carro of carros">
-      <li class="list-group-item" [style.background]="(carro.ano < 2017 ? 'red' : 'yellow')">
-        {{carro.nome}} - {{carro.ano}}
-      </li>
-    </ul>
+    <!-- e1p2 -->
+    <div>
+      {{ dtNascimento | date:'dd/MM/yyyy' }}
+    </div>
+
+    <br>
+
+    <!-- e1p3 -->
+    <div class="btn btn-success" (click)="verData()">CHECK DATA</div>
 
   </div>
 </div>
 
 <div class="container mt-5">
-  <h2> Diretive NgStyle - exemplo 2</h2>
+  <h2> Usando Pipes - exemplo 2</h2>
   <div class="jumbotron">
 
     <!-- e2p1 f -->
-    <ul class="list-group" *ngFor="let carro of carros">
-      <li class="list-group-item" [ngStyle]="{
-        'background': (carro.ano < 2017 ? 'red' : 'yellow'),
-        'font-weight': (carro.ano < 2017 ? 'bold' : 'normal')
-      }">
-        {{carro.nome}} - {{carro.ano}}
-      </li>
-    </ul>
+    <div>
+      {{ dtNascimento | date:'fullDate' | uppercase }}
+    </div>
+
+    <br>
+
+    <div class="btn btn-success" (click)="verData()">CHECK DATA</div>
 
   </div>
 </div>
