@@ -1,33 +1,14 @@
 
 <div class="container mt-5">
-  <h2> Usando Pipes - exemplo 1</h2>
+  <h2> Safe Navigation - usando para evitar erros de undefined </h2>
+  <h4> Cannot read property 'nome do campo' of undefined </h4>
   <div class="jumbotron">
 
-    <!-- e1p2 -->
-    <div>
-      {{ dtNascimento | date:'dd/MM/yyyy' }}
-    </div>
+    <h2> {{ carro?.nome }} </h2>
 
-    <br>
-
-    <!-- e1p3 -->
-    <div class="btn btn-success" (click)="verData()">CHECK DATA</div>
+    <br>  sem safe navigation <br>
+    {{ carro && carro.nome ? carro.nome : 'nao existe' }}
 
   </div>
 </div>
 
-<div class="container mt-5">
-  <h2> Usando Pipes - exemplo 2</h2>
-  <div class="jumbotron">
-
-    <!-- e2p1 f -->
-    <div>
-      {{ dtNascimento | date:'fullDate' | uppercase }}
-    </div>
-
-    <br>
-
-    <div class="btn btn-success" (click)="verData()">CHECK DATA</div>
-
-  </div>
-</div>

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Carro } from './carro.interface';
 
 @Component({
   selector: 'app-root',
@@ -9,14 +10,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
-  // e1p1
-  dtNascimento = new Date();
-
-  frutas = ['banana', 'pera', 'maca', 'laranja'];
-
-  // e1p4 f (ver data no console)
-  verData() {
-    console.log(this.dtNascimento);
-  }
+  carro: Carro;
 
 }
