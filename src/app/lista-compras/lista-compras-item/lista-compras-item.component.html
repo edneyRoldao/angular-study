@@ -1,0 +1,9 @@
+<div class="card mt-2">
+  <div class="card-header">
+    {{ item.nome }}
+  </div>
+  <div class="card-body">
+    <p class="card-text"> {{ item.categoria }} <br>
+    {{ item?.valor | currency }} </p>
+  </div>
+</div>
