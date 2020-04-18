@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { ItemLista } from '../models/itemLista.model';
 
 @Component({
@@ -9,6 +9,15 @@ import { ItemLista } from '../models/itemLista.model';
 export class ListaComprasItemComponent {
 
   @Input()
-  item: ItemLista;
+  item: ItemLista; // nao esquecer de colocar o id no modelo
+
+  // e1p1
+  @Output()
+  remover: EventEmitter<number> = new EventEmitter();
+
+  // e1p2
+  onRemove() {
+    this.remover.emit(this.item.id);
+  }
 
 }

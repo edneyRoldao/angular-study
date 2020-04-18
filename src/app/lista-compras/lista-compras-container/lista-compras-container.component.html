@@ -4,6 +4,20 @@
   </div>
 
   <div class="mt-4">
-    <lista-compras-listagem [listaCompras]="lista"></lista-compras-listagem>
+    <h6>Listagem</h6>
+
+    <!-- extra -->
+    <div *ngIf="!lista || !lista.length">
+      <div class="alert alert-warning" role="alert">
+        Não existe itens nessa lista de compras
+      </div>
+    </div>
+
+    <!-- e1p4 -->
+    <lista-compras-item (remover)="onRemoveHandler($event)"
+                        [item]="itemLista"
+                        *ngFor="let itemLista of lista">
+    </lista-compras-item>
   </div>
+
 </div>
