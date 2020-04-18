@@ -5,12 +5,14 @@ import { CommonModule } from '@angular/common';
 import { ListaComprasContainerComponent } from './lista-compras-container/lista-compras-container.component'
 import { ListaComprasContadorComponent } from './lista-compras-contador/lista-compras-contador.component';
 import { ListaComprasItemComponent } from './lista-compras-item/lista-compras-item.component';
+import { ListaComprasFormularioComponent } from './lista-compras-formulario/lista-compras-formulario.component';
 
 @NgModule({
   declarations: [
     ListaComprasContainerComponent,
     ListaComprasContadorComponent,
-    ListaComprasItemComponent
+    ListaComprasItemComponent,
+    ListaComprasFormularioComponent
   ],
   imports: [
     CommonModule
