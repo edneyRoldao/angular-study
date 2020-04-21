@@ -1,6 +1,8 @@
+import { Categoria } from '../../shared/models/categoria.model';
+
 export interface ItemLista {
   id: number;
   nome: string;
-  categoria: 'ELETRONICOS' | 'ALIMENTOS';
+  categoria?: Categoria;
   valor?: number;
 }

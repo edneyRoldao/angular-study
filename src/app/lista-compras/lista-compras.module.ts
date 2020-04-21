@@ -8,7 +8,8 @@ import { ListaComprasItemComponent } from './lista-compras-item/lista-compras-it
 import { ListaComprasFormularioComponent } from './lista-compras-formulario/lista-compras-formulario.component';
 
 // services
-import { ListaComprasService } from './services/lista-compras.service';
+import { CategoriaService } from '../shared/services/categoria.service';
+import {ListaComprasService} from './services/lista-compras.service';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,10 @@ import { ListaComprasService } from './services/lista-compras.service';
   ],
   exports: [
     ListaComprasContainerComponent
+  ],
+  providers: [
+    ListaComprasService,
+    CategoriaService
   ]
 })
 export class ListaComprasModule {

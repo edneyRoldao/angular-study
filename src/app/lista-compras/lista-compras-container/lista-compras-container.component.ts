@@ -7,10 +7,7 @@ import { ListaComprasService } from '../services/lista-compras.service';
   templateUrl: 'lista-compras-container.component.html',
   styleUrls: [
     'lista-compras-container.component.css'
-  ],
-
-  // esse cara pode ficar no modulo, assim ele fica acessível por todos os componentes do mesmo
-  providers: [ ListaComprasService ]
+  ]
 })
 export class ListaComprasContainerComponent implements OnInit {
 
