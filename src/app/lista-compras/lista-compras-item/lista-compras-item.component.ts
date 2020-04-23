@@ -9,13 +9,11 @@ import { ItemLista } from '../models/itemLista.model';
 export class ListaComprasItemComponent {
 
   @Input()
-  item: ItemLista; // nao esquecer de colocar o id no modelo
+  item: ItemLista;
 
-  // e1p1
   @Output()
   remover: EventEmitter<number> = new EventEmitter();
 
-  // e1p2
   onRemove() {
     this.remover.emit(this.item.id);
   }
