@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import { ItemLista } from '../models/itemLista.model';
 import { ListaComprasService } from '../services/lista-compras.service';
+import {logger} from 'codelyzer/util/logger';
 
 @Component({
   selector: 'lista-compras',
@@ -17,11 +18,23 @@ export class ListaComprasContainerComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.lista = this.listaComprasService.getListaCompras();
+
+    this.listaComprasService.listarTodos().subscribe(
+
+      (data) => {
+        console.log('aqui');
+        this.lista = data;
+      },
+
+      (error) => {
+        console.log('ocorreu um erro', error);
+      }
+
+    );
+
   }
 
   onRemoveHandler(itemId: number) {
-    this.lista = this.listaComprasService.removerItem(itemId);
   }
 
 }
