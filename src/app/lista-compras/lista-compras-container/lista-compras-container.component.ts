@@ -1,8 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import { ItemLista } from '../models/itemLista.model';
 import { ListaComprasService } from '../services/lista-compras.service';
-import {logger} from 'codelyzer/util/logger';
-import {log} from 'util';
 
 @Component({
   selector: 'lista-compras',
@@ -37,11 +35,18 @@ export class ListaComprasContainerComponent implements OnInit {
   }
 
   onRemoveHandler(itemId: number) {
-    this.listaComprasService.removerItem(itemId).subscribe(
-      data => console.log(data),
-        error => console.log(error));
+    this.listaComprasService
+      .removerItem(itemId)
+      .subscribe();
+    location.reload();
+  }
 
-    this.carregarLista();
+  onInsertHandler(item: ItemLista) {
+    this.listaComprasService
+      .inserirItem(item)
+      .subscribe();
+
+    location.reload();
   }
 
 }

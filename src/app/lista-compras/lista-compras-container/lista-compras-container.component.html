@@ -2,7 +2,8 @@
 
   <div class="mt-4">
     Formulario
-    <lista-compras-formulario></lista-compras-formulario>
+    <lista-compras-formulario (itemEmitter)="onInsertHandler($event)">
+    </lista-compras-formulario>
   </div>
 
   <div class="mt-4">

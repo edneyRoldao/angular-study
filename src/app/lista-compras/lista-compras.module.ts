@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import {HttpClientModule} from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 // components
 import { ListaComprasContainerComponent } from './lista-compras-container/lista-compras-container.component'
@@ -21,6 +22,7 @@ import {ListaComprasService} from './services/lista-compras.service';
   ],
   imports: [
     CommonModule,
+    FormsModule,
     HttpClientModule
   ],
   exports: [
