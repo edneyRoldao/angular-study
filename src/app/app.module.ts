@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 // modules
+import { LoginModule } from './login/login.module';
 import { ListaComprasModule } from './lista-compras/lista-compras.module';
 
 // components
@@ -17,7 +18,8 @@ import { AppComponent } from './app.component';
     FormsModule,
 
     // app modules
-    ListaComprasModule
+    ListaComprasModule,
+    LoginModule
   ],
   bootstrap: [
     AppComponent
